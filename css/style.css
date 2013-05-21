@@ -1071,6 +1071,15 @@ header .right a {
   text-transform: uppercase;
 }
 
+@media only screen and (max-width: 600px) {
+  header .right {
+    text-align: left;
+  }
+  header .right a {
+    display: block;
+  }
+}
+
 .button {
   display: block;
   padding: 0.5em 2em;
@@ -1117,6 +1126,12 @@ header .right a {
   box-shadow: 0 0 12px 1px #2883ff;
 }
 
+@media only screen and (max-width: 600px) {
+  .button.blue {
+    font-size: 0.8em;
+  }
+}
+
 #main-header {
   font-family: 'proxima-nova', serif;
 }
@@ -1130,7 +1145,7 @@ header .right a {
   padding: 110px 0;
   color: #fff;
   background-image: url('../images/landing-bg.jpg');
-  background-position: center;
+  background-position: 20% center;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -1337,6 +1352,10 @@ footer .row {
 
 #prayer-form.sent h2 {
   display: block;
+}
+
+iframe {
+  max-width: 100%;
 }
 
 /*
