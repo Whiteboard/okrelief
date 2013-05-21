@@ -24,9 +24,9 @@
 	if (isset($_POST) && count($_POST)){
 
 		try {
-			$email = $_POST["email"];
-			$message = $_POST["message"];
-			$name = $_POST["uname"];
+			$email = stripslashes($_POST["email"]);
+			$message = stripslashes($_POST["message"]);
+			$name = stripslashes($_POST["uname"]);
 	    	$stmt = $DBH->prepare("INSERT INTO prayers VALUES (?,?,?,?)");
 	    	$data = array(null, $email, $message, $name);
 	    	$stmt->execute($data);

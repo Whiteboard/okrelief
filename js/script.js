@@ -23,6 +23,28 @@ $("body").on("focus", "textarea,input", function(){
 	}
 });
 
+$("body").on("submit", "form", function(e){
+	e.preventDefault();
+	$.post("prayer/create.php", $(this).serialize(), function(data){
+		console.log(data);
+		$("form").addClass("sent");
+		renderPrayers();
+	});
+});
 
+function renderPrayers(){
+	$.getJSON("prayer/index.php", function(data){
+		console.log(data);
+		var ctx = {
+			messages : data
+		};
+		var source   = $("#prayer-template").html(),
+			template = Handlebars.compile(source),
+			html    = template(ctx);
+			$(".prayer-hold").html(html);
+	});
+}
+
+renderPrayers();
 
 }(jQuery, window));

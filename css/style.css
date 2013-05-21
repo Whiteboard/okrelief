@@ -1127,7 +1127,7 @@ header .right a {
 
 #landing {
   position: relative;
-  padding: 80px 0;
+  padding: 110px 0;
   color: #fff;
   background-image: url('../images/landing-bg.jpg');
   background-position: center;
@@ -1324,6 +1324,19 @@ footer .row {
 
 #social iframe {
   width: 100%;
+}
+
+#prayer-form h2 {
+  display: none;
+}
+
+#prayer-form.sent input,
+#prayer-form.sent textarea {
+  display: none;
+}
+
+#prayer-form.sent h2 {
+  display: block;
 }
 
 /*
