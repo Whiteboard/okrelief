@@ -1,4 +1,5 @@
 <?php
+	include_once("vetemail.php");
 
 	try {  
 	  # MS SQL Server and Sybase with PDO_DBLIB
@@ -25,6 +26,10 @@
 
 		try {
 			$email = stripslashes($_POST["email"]);
+			if (!validEmail($email)){
+				echo json_encode(array("result"=>"failure","exception"=>"Invalid email"));
+				die;
+			}
 			$message = stripslashes($_POST["message"]);
 			$name = stripslashes($_POST["uname"]);
 	    	$stmt = $DBH->prepare("INSERT INTO prayers VALUES (?,?,?,?)");
