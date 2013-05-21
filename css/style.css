@@ -883,6 +883,15 @@ header#main-header .right a {
   text-transform: uppercase;
 }
 
+@media only screen and (max-width: 600px) {
+  header#main-header .right {
+    text-align: left;
+  }
+  header#main-header .right a {
+    display: block;
+  }
+}
+
 header#main-header nav {
   position: relative;
   z-index: 10;
@@ -960,6 +969,12 @@ header#main-header:after {
   box-shadow: 0 0 12px 1px #2883ff;
 }
 
+@media only screen and (max-width: 600px) {
+  .button.blue {
+    font-size: 0.8em;
+  }
+}
+
 @media only screen and (max-width: 960px) {
   .button {
     padding: 0.5em 1em;
@@ -980,7 +995,7 @@ header#main-header:after {
   padding: 110px 0;
   color: #fff;
   background-image: url('../images/landing-bg.jpg');
-  background-position: center;
+  background-position: 20% center;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -1219,6 +1234,10 @@ footer .row {
 
 #prayer-form.sent h2 {
   display: block;
+}
+
+iframe {
+  max-width: 100%;
 }
 
 /*

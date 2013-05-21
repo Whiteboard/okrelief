@@ -80,6 +80,12 @@ header#main-header {
 			text-transform: uppercase;
 			display: inline-block;
 		}
+		@media only screen and (max-width: 600px){
+			text-align: left;
+			a {
+				display: block;
+			}
+		}
 	}
 	nav {
 		position:relative;
@@ -140,6 +146,9 @@ header#main-header {
 			box-shadow: 0 0 12px 1px @blue;
 			text-shadow: 1px 1px 0 rgba(0,0,0,0.6);
 		}
+		@media only screen and (max-width:600px){
+			font-size: 0.8em;
+		}
 	}
 
 	@media only screen and (max-width:960px) {
@@ -157,7 +166,7 @@ header#main-header {
 
 #landing {
 	background-image:url('../images/landing-bg.jpg');
-	background-position:center;
+	background-position:20% center;
 	background-repeat:no-repeat;
 	background-size:cover;
 	color:#fff;
@@ -369,4 +378,7 @@ footer {
 			display: block;
 		}
 	}
+}
+iframe {
+	max-width: 100%;
 }
