@@ -1,12 +1,71 @@
-/*
+body {
+	padding:0;
+	margin:0;
+	font-size:1em;
+	color:#222;
+}
 
-All site-specific styles go here.
+.bold {
+	font-weight:bold;
+}
 
-Some rules and guidelines:
-	classes are better than IDs
-	don't specify font-sizes more than once
-	avoid making classes for one rule
-	avoid using pixels for font-sizes except on body
-	don't abuse less nesting
+.light{
+	font-weight:100;
+}
 
-*/
+.bg-white {
+	background-color:#fff;
+}
+
+.fanwood {
+	font-family:@serif;
+}
+
+.proxima {
+	font-family:@proxmima;
+}
+
+.button {
+	text-transform:uppercase;
+	font-weight:bold;
+	padding:1em 2em;
+	display:block;
+	.border-radius:5px;
+	&.red {
+		background-color:@red;
+		color:#fff;
+	}
+	&.blue {
+		background-color:@blue;
+		color:#fff;
+	}
+}
+
+#main-header {}
+
+#landing {
+	background-image:url('../images/landing-bg.jpg');
+	background-position:center;
+	background-repeat:no-repeat;
+	background-size:cover;
+	color:#fff;
+	blockquote {
+		font-size:2em;
+		line-height:1.6em;
+	}
+	p {
+		font-size:1.2em;
+		line-height:1.4em;
+	}
+}
+
+textarea,
+input[type=text],
+input[type=email] {
+	background-color:fadeout(#000,60%);
+	.border-radius(5px);
+	margin:0 0 1em 0;
+	font-family:@serif;
+	color:#fff;
+	padding:1em;
+}
