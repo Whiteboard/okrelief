@@ -109,9 +109,9 @@
                         <script id="news-template" type="text/x-handlebars">
                         {{#each posts}}
                             <article>
-                                <h3><a href="">{{title}}</a></h3>
+                                <h3><a href="{{url}}" target="_blank">{{title}}</a></h3>
                                 <a href="#" class="video-thumb" title="{{title}}" style="background-image:url({{ imageurl }});"></a>
-                                <p>{{{ excerpt }}}</p>
+                                <p>{{{ content }}}</p>
                             </article>
                         {{/each}}
 

@@ -4,7 +4,7 @@
 */
 (function($,w,undefined){
 
-$.getJSON("http://staging.ourcog.com/api/core/get_category_posts/?slug=okcog&callback=?", function(data){
+$.getJSON("http://staging.ourcog.com/tag/okcog/?json=1&callback=?", function(data){
 	console.log(data);
 	var source   = $("#news-template").html(),
 			template = Handlebars.compile(source),
@@ -26,7 +26,6 @@ $("body").on("focus", "textarea,input", function(){
 $("body").on("submit", "form", function(e){
 	e.preventDefault();
 	$.post("prayer/create.php", $(this).serialize(), function(data){
-		console.log(data);
 		$("form").addClass("sent");
 		renderPrayers();
 	});
@@ -34,7 +33,6 @@ $("body").on("submit", "form", function(e){
 
 function renderPrayers(){
 	$.getJSON("prayer/index.php", function(data){
-		console.log(data);
 		var ctx = {
 			messages : data
 		};
