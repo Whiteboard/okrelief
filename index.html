@@ -6,7 +6,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>wbBoiler - a Whiteboard Starting Point</title>
+        <title>Oklahoma Tornado Relief :: Church of God</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <!--
@@ -43,19 +43,29 @@
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
 
+
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=228618160614253";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
         <header id="main-header" class="container">
                 <nav id="main-nav" class="row">
-                    <div class="columns six alpha">
+                    <div class="columns seven alpha">
                         <a href="/" id="logo">
                             <span class="light">OKLAHOMA TORNADO</span><br>
                             <span class="bold">RELIEF</span>
                         </a>
                     </div>
-                    <div class="columns six omega right">
-                        <a href="#" data-scrolltarget="#photos">Photos</a>
-                        <a href="#" data-scrolltarget="#news">News</a>
-                        <a href="#" data-scrolltarget="#messages">Messages</a>
-                        <a href="#" data-scrolltarget="#donate" class="red">Donate</a>
+                    <div class="columns five omega right">
+                        <!-- <a href="#" data-scrolltarget="#photos">Photos</a> -->
+                        <a href="#news" data-scrolltarget="#news">News / Info</a>
+                        <a href="#messages" data-scrolltarget="#messages">Messages</a>
+                        <a href="#donate" data-scrolltarget="#donate" class="red">Donate</a>
                     </div>
                 </nav>
         </header>
@@ -71,6 +81,7 @@
                     </div>
                     <div class="columns five offset-by-one omega">
                         <a href="#" target="_blank" class="button red">Donate Now</a>
+                        <em>Online donations are processed through <a href="http://operationcompassion.org" target="_blank">Operation Compassion</a>.</em>
                         <hr>
                         <form id="prayer-form">
                             <textarea id="message" name="message">Click here to enter your message.</textarea>
@@ -91,8 +102,8 @@
         <section id="news">
             <div class="container">
                 <div class="row">
-                    <div class="columns eight alpha news-wrap">
-                        <h2>News</h2>
+                    <div class="columns seven alpha news-wrap">
+                        <h2>News &amp; Information</h2>
 
                         <script id="news-template" type="text/x-handlebars">
                         {{#each posts}}
@@ -110,9 +121,9 @@
 
                         <div class="clearfix"></div>
 
-                        <a href="#" class="more-news-stories">More News &rarr;</a>
+                        <a href="http://ourcog.com/tag/okcog/" class="more-news-stories" target="_blank">More News &amp; Videos &rarr;</a>
                     </div>
-                    <div class="columns four omega messages-wrap">
+                    <div id="messages" class="columns four offset-by-one omega messages-wrap">
                         <h2>Messages &amp; Prayers</h2>
                         <div class="message">
                             <div class="text">Our prayers are with the families of Moore, OK today!</div>
@@ -121,12 +132,59 @@
                                 <span class="city">Chattanooga, TN</span>
                             </div>
                         </div>
+
+                        <div class="message">
+                            <div class="text">Our prayers are with the families of Moore, OK today!</div>
+                            <div class="author">
+                                <span class="name">Taylor Jones</span><br>
+                                <span class="city">Chattanooga, TN</span>
+                            </div>
+                        </div>
+
+                        <div class="message">
+                            <div class="text">Our prayers are with the families of Moore, OK today!</div>
+                            <div class="author">
+                                <span class="name">Taylor Jones</span><br>
+                                <span class="city">Chattanooga, TN</span>
+                            </div>
+                        </div>
+
+                        <div class="message">
+                            <div class="text">Our prayers are with the families of Moore, OK today!</div>
+                            <div class="author">
+                                <span class="name">Taylor Jones</span><br>
+                                <span class="city">Chattanooga, TN</span>
+                            </div>
+                        </div>
+
+                        <a href="http://ourcog.com/tag/okcog/" class="more-news-stories" target="_blank">More Prayers &amp; Messages &rarr;</a>
                     </div>
                 </div>
             </div>
         </section>
+
+        <hr>
+
+        <div class="container" id="social">
+            <div class="row">
+                <div class="columns five alpha">
+                    <h2>Leave a Message on Facebook</h2>
+                    <div class="fb-comments" data-href="http://ourcog.com/oklahomatornadorelief" data-width="470" data-num-posts="10"></div>
+                </div>
+                <div class="columns five offset-by-two omega">
+                    <h2>Twitter Live Feed <a href="" class="hashtag">#OKCOG</a></h2>
+                    <a class="twitter-timeline" href="https://twitter.com/search?q=%23OKCOG" data-widget-id="336917981273661441">Tweets about "#OKCOG"</a>
+                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                </div>
+            </div>
+        </div>
+
         <footer>
-            
+            <div class="container">
+                <div class="row">
+                    <div class="columns twelve copyright">&copy; 2013 Church of God, Inc.</div>
+                </div>
+            </div>
         </footer>
 
         <!-- Faster than loading jQuery from a CDN (once it is MINIFIED and CONCAT'D; see the makefile) -->
