@@ -208,72 +208,38 @@ Less version credit: https://github.com/thatericsmith/Skeleton
   padding-left: 1200px;
 }
 
-/*  Skeleton Continued  - paste this code before the "Clearing" code in the 
-"skeleton.css" document if you wish to have a responsive document  */
-
-/* FIX FOR PLUS SIZES
-================================================== */
-
-@media only screen and (min-width: 960px) and (max-width: 1199px) {
-  .container.plusfour,
-  .container.pluseight {
-    position: relative;
-    width: 960px;
-    padding: 0;
-    margin: 0 auto;
+@media only screen and (max-width: 960px) {
+  {
+    /* Nested Column Classes */
+  
   }
-  .container .twenty.columns {
-    width: 940px;
-  }
-  .container .twentyfour.columns {
-    width: 940px;
-  }
-}
-
-@media only screen and (min-width: 1200px) and (max-width: 1439px) {
-  .container.pluseight {
-    position: relative;
-    width: 1200px;
-    padding: 0;
-    margin: 0 auto;
-  }
-  .container .twenty.columns {
-    width: 1180px;
-  }
-  .container .twentyfour.columns {
-    width: 1180px;
-  }
-}
-
-/* #Tablet (Portrait)
-================================================== */
-
-/* Note: Design for a width of 768px */
-
-@media only screen and (min-width: 768px) and (max-width: 959px) {
   .container {
-    width: 768px;
+    position: relative;
+    width: 90%;
+    padding: 0;
+    margin: 0 5%;
   }
-  .container.plusfour {
-    width: 768px;
+  .column,
+  .columns {
+    display: inline;
+    float: left;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
   }
-  .container.pluseight {
-    width: 768px;
-  }
-  .container .column,
-  .container .columns {
-    margin-right: 10px !important;
-    margin-left: 10px !important;
+  .row {
+    margin-bottom: 25px;
   }
   .column.alpha,
   .columns.alpha {
-    margin-right: 10px !important;
     margin-left: 0!important;
   }
   .column.omega,
   .columns.omega {
     margin-right: 0!important;
-    margin-left: 10px !important;
+  }
+  .column.alpha.omega,
+  .columns.alpha.omega {
+    margin: 0!important;
   }
   .container {
     /* Base Grid */
@@ -282,135 +248,8 @@ Less version credit: https://github.com/thatericsmith/Skeleton
   
   }
   .container .one.column {
-    width: 28px;
-  }
-  .container .columns.two {
-    width: 76px;
-  }
-  .container .columns.three {
-    width: 124px;
-  }
-  .container .columns.four {
-    width: 172px;
-  }
-  .container .columns.five {
-    width: 220px;
-  }
-  .container .columns.six {
-    width: 268px;
-  }
-  .container .columns.seven {
-    width: 316px;
-  }
-  .container .columns.eight {
-    width: 364px;
-  }
-  .container .columns.nine {
-    width: 412px;
-  }
-  .container .columns.ten {
-    width: 460px;
-  }
-  .container .columns.eleven {
-    width: 508px;
-  }
-  .container .columns.twelve {
-    width: 556px;
-  }
-  .container .columns.thirteen {
-    width: 604px;
-  }
-  .container .columns.fourteen {
-    width: 652px;
-  }
-  .container .columns.fifteen {
-    width: 700px;
-  }
-  .container .columns.sixteen {
-    width: 748px;
-  }
-  .container .columns.twenty {
-    width: 748px;
-  }
-  .container .columns.twentyfour {
-    width: 748px;
-  }
-  .container .one-third.column {
-    width: 236px;
-  }
-  .container .two-thirds.column {
-    width: 492px;
-  }
-  .container .offset-by-one {
-    padding-left: 48px;
-  }
-  .container .offset-by-two {
-    padding-left: 96px;
-  }
-  .container .offset-by-three {
-    padding-left: 144px;
-  }
-  .container .offset-by-four {
-    padding-left: 192px;
-  }
-  .container .offset-by-five {
-    padding-left: 240px;
-  }
-  .container .offset-by-six {
-    padding-left: 288px;
-  }
-  .container .offset-by-seven {
-    padding-left: 336px;
-  }
-  .container .offset-by-eight {
-    padding-left: 384px;
-  }
-  .container .offset-by-nine {
-    padding-left: 432px;
-  }
-  .container .offset-by-ten {
-    padding-left: 480px;
-  }
-  .container .offset-by-eleven {
-    padding-left: 528px;
-  }
-  .container .offset-by-twelve {
-    padding-left: 576px;
-  }
-  .container .offset-by-thirteen {
-    padding-left: 624px;
-  }
-  .container .offset-by-fourteen {
-    padding-left: 672px;
-  }
-  .container .offset-by-fifteen {
-    padding-left: 720px;
-  }
-}
-
-/*  #Mobile (Portrait)
-================================================== */
-
-@media only screen and (max-width: 767px) {
-  {
-    /* Offsets */
-  
-  }
-  .columns,
-  .column {
-    margin: 0!important;
-  }
-  .container {
-    width: 300px;
-  }
-  .container.plusfour,
-  .container.pluseight {
-    width: 300px;
-  }
-  .container .column.one-third,
-  .container .column.two-thirds,
-  .container .column.one {
-    width: 300px;
+    width: 90%;
+    margin: 0 5%;
   }
   .container .columns.two,
   .container .columns.three,
@@ -429,7 +268,13 @@ Less version credit: https://github.com/thatericsmith/Skeleton
   .container .columns.sixteen,
   .container .columns.twenty,
   .container .columns.twentyfour {
-    width: 300px;
+    width: 100%;
+  }
+  .container .one-third.column {
+    width: 100%;
+  }
+  .container .two-thirds.column {
+    width: 100%;
   }
   .container .offset-by-one,
   .container .offset-by-two,
@@ -447,45 +292,6 @@ Less version credit: https://github.com/thatericsmith/Skeleton
   .container .offset-by-fourteen,
   .container .offset-by-fifteen {
     padding-left: 0;
-  }
-}
-
-/* #Mobile (Landscape)
-================================================== */
-
-/* Note: Design for a width of 480px */
-
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-  .container {
-    width: 420px;
-  }
-  .container.plusfour,
-  .container.pluseight {
-    width: 420px;
-  }
-  .container .column.one-third,
-  .container .column.two-thirds,
-  .container .column.one {
-    width: 420px;
-  }
-  .container .columns.two,
-  .container .columns.three,
-  .container .columns.four,
-  .container .columns.five,
-  .container .columns.six,
-  .container .columns.seven,
-  .container .columns.eight,
-  .container .columns.nine,
-  .container .columns.ten,
-  .container .columns.eleven,
-  .container .columns.twelve,
-  .container .columns.thirteen,
-  .container .columns.fourteen,
-  .container .columns.fifteen,
-  .container .columns.sixteen,
-  .container .columns.twenty,
-  .container .columns.twentyfour {
-    width: 420px;
   }
 }
 
@@ -988,6 +794,7 @@ body {
   margin: 0;
   font-size: 1em;
   color: #222;
+  background-color: #fff;
 }
 
 a,
@@ -1032,43 +839,79 @@ h2 {
   border-top: 1px solid rgba(0, 0, 0, 0.19999999999999996);
 }
 
-header #logo {
+header#main-header {
+  position: relative;
+  background-color: #fff;
+}
+
+header#main-header #logo {
   font-size: 2em;
 }
 
-header .row {
+header#main-header .row {
   padding: 30px 0;
   margin: 0;
 }
 
-header a {
+header#main-header a {
   line-height: 1;
   color: #222;
 }
 
-header a:visited,
-header a:active {
+header#main-header a:visited,
+header#main-header a:active {
   color: #444;
 }
 
-header a.current,
-header a:hover {
+header#main-header a.current,
+header#main-header a:hover {
   color: #d40000 !important;
 }
 
-header a.red {
+header#main-header a.red {
   color: #d40000 !important;
 }
 
-header .right {
+header#main-header .right {
   text-align: right;
 }
 
-header .right a {
+header#main-header .right a {
   display: inline-block;
   padding: 26px 12px 0 12px;
   font-weight: bold;
   text-transform: uppercase;
+}
+
+header#main-header nav {
+  position: relative;
+  z-index: 10;
+  background-color: #fff;
+}
+
+header#main-header:after {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 1px;
+  border-top: 1px solid rgba(0, 0, 0, 0.8);
+  content: '';
+}
+
+@media only screen and (max-width: 960px) {
+  header#main-header .columns {
+    width: 100% !important;
+  }
+  header#main-header .right {
+    padding-top: 15px;
+    text-align: left;
+  }
+  header#main-header .right a {
+    padding: 5px 10px 0 0;
+    font-size: 1em;
+  }
 }
 
 .button {
@@ -1117,6 +960,13 @@ header .right a {
   box-shadow: 0 0 12px 1px #2883ff;
 }
 
+@media only screen and (max-width: 960px) {
+  .button {
+    padding: 0.5em 1em;
+    font-size: 1.5em;
+  }
+}
+
 #main-header {
   font-family: 'proxima-nova', serif;
 }
@@ -1127,7 +977,7 @@ header .right a {
 
 #landing {
   position: relative;
-  padding: 80px 0;
+  padding: 110px 0;
   color: #fff;
   background-image: url('../images/landing-bg.jpg');
   background-position: center;
@@ -1174,6 +1024,12 @@ header .right a {
   text-decoration: underline;
 }
 
+@media only screen and (max-width: 960px) {
+  #landing {
+    padding: 50px 0;
+  }
+}
+
 textarea {
   font-size: 1.3em;
 }
@@ -1209,6 +1065,14 @@ textarea:focus,
 input[type=text]:focus,
 input[type=email]:focus {
   background-color: rgba(0, 0, 0, 0.8);
+}
+
+@media only screen and (max-width: 960px) {
+  textarea,
+  input[type=text],
+  input[type=email] {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
 }
 
 input[type=submit] {
@@ -1324,6 +1188,24 @@ footer .row {
 
 #social iframe {
   width: 100%;
+}
+
+#social .facebook-mobile {
+  display: none;
+}
+
+#social .facebook-fullsize {
+  display: inline-block;
+}
+
+@media only screen and (max-width: 960px) {
+  #social .facebook-mobile {
+    display: block;
+    text-align: center;
+  }
+  #social .facebook-fullsize {
+    display: none;
+  }
 }
 
 /*
