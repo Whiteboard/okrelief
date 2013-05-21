@@ -84,8 +84,9 @@
                         <em>Online donations are processed through <a href="http://operationcompassion.org" target="_blank">Operation Compassion</a>.</em>
                         <hr>
                         <form id="prayer-form">
+                            <h2>Thank you for your submission!</h2>
                             <textarea id="message" name="message">Click here to enter your message.</textarea>
-                            <input type="text" name="name" value="Enter your name."/>
+                            <input type="text" name="uname" value="Enter your name."/>
                             <input type="email" name="email" value="Enter your email address."/>
                             <div class="checkbox-wrap">
                                 <option id="email-alerts" value=""/><label>I would look to receive future updates about Oklahoma by email.</label>
@@ -125,38 +126,17 @@
                     </div>
                     <div id="messages" class="columns four offset-by-one omega messages-wrap">
                         <h2>Messages &amp; Prayers</h2>
-                        <div class="message">
-                            <div class="text">Our prayers are with the families of Moore, OK today!</div>
-                            <div class="author">
-                                <span class="name">Taylor Jones</span><br>
-                                <span class="city">Chattanooga, TN</span>
+                        <div class="prayer-hold"></div>
+                        <script id="prayer-template" type="text/x-handlebars">
+                        {{#each messages}}
+                            <div class="message">
+                                <div class="text">{{ message }}</div>
+                                <div class="author">
+                                    <span class="name">{{ name }}</span><br>
+                                </div>
                             </div>
-                        </div>
-
-                        <div class="message">
-                            <div class="text">Our prayers are with the families of Moore, OK today!</div>
-                            <div class="author">
-                                <span class="name">Taylor Jones</span><br>
-                                <span class="city">Chattanooga, TN</span>
-                            </div>
-                        </div>
-
-                        <div class="message">
-                            <div class="text">Our prayers are with the families of Moore, OK today!</div>
-                            <div class="author">
-                                <span class="name">Taylor Jones</span><br>
-                                <span class="city">Chattanooga, TN</span>
-                            </div>
-                        </div>
-
-                        <div class="message">
-                            <div class="text">Our prayers are with the families of Moore, OK today!</div>
-                            <div class="author">
-                                <span class="name">Taylor Jones</span><br>
-                                <span class="city">Chattanooga, TN</span>
-                            </div>
-                        </div>
-
+                        {{/each}}
+                        </script>
                         <a href="http://ourcog.com/tag/okcog/" class="more-news-stories" target="_blank">More Prayers &amp; Messages &rarr;</a>
                     </div>
                 </div>
