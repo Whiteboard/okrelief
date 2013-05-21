@@ -990,6 +990,18 @@ body {
   color: #222;
 }
 
+a,
+a:link,
+a:visited,
+a:active {
+  color: #d40000;
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgba(212, 0, 0, 0.8);
+}
+
 * {
   -webkit-font-smoothing: antialiased;
 }
@@ -1014,15 +1026,56 @@ body {
   font-family: 'proxima-nova', serif;
 }
 
+header #logo {
+  font-size: 2em;
+}
+
+header .row {
+  padding-top: 20px;
+}
+
+header a {
+  line-height: 1;
+  color: #222;
+}
+
+header a:visited,
+header a:active {
+  color: #444;
+}
+
+header a.current,
+header a:hover {
+  color: #d40000;
+}
+
+header .right {
+  text-align: right;
+}
+
+header .right a {
+  display: inline-block;
+  padding: 26px 12px 0 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
 .button {
   display: block;
   padding: 1em 2em;
   font-weight: bold;
   text-align: center;
   text-transform: uppercase;
+  border: none;
   -webkit-border-radius: 5px;
      -moz-border-radius: 5px;
           border-radius: 5px;
+  outline: none;
+  -webkit-transition: all 0.4s;
+     -moz-transition: all 0.4s;
+      -ms-transition: all 0.4s;
+       -o-transition: all 0.4s;
+          transition: all 0.4s;
   -webkit-background-clip: padding-box;
      -moz-background-clip: padding;
           background-clip: padding-box;
@@ -1033,21 +1086,23 @@ body {
   background-color: #d40000;
 }
 
+.button.red:focus,
+.button.red:hover {
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.6);
+  outline: none;
+  box-shadow: 0 0 12px 1px #d40000;
+}
+
 .button.blue {
   color: #fff;
   background-color: #2883ff;
 }
 
-a,
-a:link,
-a:visited,
-a:active {
-  color: #d40000;
-  text-decoration: none;
-}
-
-a:hover {
-  color: rgba(212, 0, 0, 0.8);
+.button.blue:focus,
+.button.blue:hover {
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.6);
+  outline: none;
+  box-shadow: 0 0 12px 1px #2883ff;
 }
 
 #main-header {
@@ -1108,9 +1163,20 @@ input[type=email] {
   outline: none;
   box-shadow: none;
   box-sizing: border-box;
+  -webkit-transition: all 0.8s;
+     -moz-transition: all 0.8s;
+      -ms-transition: all 0.8s;
+       -o-transition: all 0.8s;
+          transition: all 0.8s;
   -webkit-background-clip: padding-box;
      -moz-background-clip: padding;
           background-clip: padding-box;
+}
+
+textarea:focus,
+input[type=text]:focus,
+input[type=email]:focus {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 article h3 {
