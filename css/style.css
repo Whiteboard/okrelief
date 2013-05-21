@@ -1054,6 +1054,10 @@ a:hover {
   font-family: 'proxima-nova', serif;
 }
 
+#main-header a {
+  color: #222;
+}
+
 #landing {
   position: relative;
   padding: 80px 0;
