@@ -4,8 +4,12 @@
 */
 (function($,w,undefined){
 
-$.getJSON("http://ourcog.com/api/core/get_category_posts/?slug=okcog&callback=?", function(data){
+$.getJSON("http://staging.ourcog.com/api/core/get_category_posts/?slug=okcog&callback=?", function(data){
 	console.log(data);
+	var source   = $("#news-template").html(),
+			template = Handlebars.compile(source),
+			html    = template(data);
+		$(".news-hold").html(html);
 });
 
 $("textarea,input").not("[type=submit]").each(function(i,el){ $(el).data("val", $(this).val()); });

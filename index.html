@@ -93,33 +93,20 @@
                 <div class="row">
                     <div class="columns eight alpha news-wrap">
                         <h2>News</h2>
-                        <article>
-                            <h3>Woman's dog found miraculuously during interview after tornado devastates town.</h3>
-                            <a href="#" class="video-thumb" title="Article title here." style="background-image:url();"></a>
-                            <p class="excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut posuere venenatis sem, egestas euismod lectus pulvinar id. Nam tellus enim, viverra vel auctor tempor, egestas id mi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris ut diam eget nunc mattis mattis. Fusce in orci leo. Vivamus eu diam nunc.</p>
-                            <a href="#" class="continue-reading">Continue Reading &rarr;</a>
-                        </article>
 
-                        <article>
-                            <h3>Woman's dog found miraculuously during interview after tornado devastates town.</h3>
-                            <a href="#" class="video-thumb" title="Article title here." style="background-image:url();"></a>
-                            <p class="excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut posuere venenatis sem, egestas euismod lectus pulvinar id. Nam tellus enim, viverra vel auctor tempor, egestas id mi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris ut diam eget nunc mattis mattis. Fusce in orci leo. Vivamus eu diam nunc.</p>
-                            <a href="#" class="continue-reading">Continue Reading &rarr;</a>
-                        </article>
+                        <script id="news-template" type="text/x-handlebars">
+                        {{#each posts}}
+                            <article>
+                                <h3><a href="">{{title}}</a></h3>
+                                <a href="#" class="video-thumb" title="{{title}}" style="background-image:url({{ imageurl }});"></a>
+                                <p>{{{ excerpt }}}</p>
+                            </article>
+                        {{/each}}
 
-                        <article>
-                            <h3>Woman's dog found miraculuously during interview after tornado devastates town.</h3>
-                            <a href="#" class="video-thumb" title="Article title here." style="background-image:url();"></a>
-                            <p class="excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut posuere venenatis sem, egestas euismod lectus pulvinar id. Nam tellus enim, viverra vel auctor tempor, egestas id mi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris ut diam eget nunc mattis mattis. Fusce in orci leo. Vivamus eu diam nunc.</p>
-                            <a href="#" class="continue-reading">Continue Reading &rarr;</a>
-                        </article>
-
-                        <article>
-                            <h3>Woman's dog found miraculuously during interview after tornado devastates town.</h3>
-                            <a href="#" class="video-thumb" title="Article title here." style="background-image:url();"></a>
-                            <p class="excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut posuere venenatis sem, egestas euismod lectus pulvinar id. Nam tellus enim, viverra vel auctor tempor, egestas id mi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris ut diam eget nunc mattis mattis. Fusce in orci leo. Vivamus eu diam nunc.</p>
-                            <a href="#" class="continue-reading">Continue Reading &rarr;</a>
-                        </article>
+                        </script>
+                        <div class="news-hold">
+                            <h2>Loading news...</h2>
+                        </div>
 
                         <div class="clearfix"></div>
 
@@ -138,10 +125,14 @@
                 </div>
             </div>
         </section>
+        <footer>
+            
+        </footer>
 
         <!-- Faster than loading jQuery from a CDN (once it is MINIFIED and CONCAT'D; see the makefile) -->
         <script src="js/vendor/jquery-2.0.0.min.js"></script>
         <script src="js/vendor/jquery-migrate-1.2.1.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.0.0-rc.3/handlebars.min.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/script.js"></script>
         <!-- the following will contain minified, concat'd versions of jquery+migrate+plugins+script
