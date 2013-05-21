@@ -1238,7 +1238,6 @@ article h3 a {
 
 .more-news-stories {
   display: inline-block;
-  float: right;
   padding: 0.7em 1.5em;
   margin-top: 1em;
   margin-bottom: 2em;
@@ -1257,6 +1256,7 @@ footer {
   margin-top: 50px;
   font-size: 0.8em;
   color: rgba(34, 34, 34, 0.5);
+  text-align: right;
   background-color: #ddd;
   border-top: 1px solid #ccc;
 }
@@ -1304,7 +1304,7 @@ footer .row {
 
 .message .author {
   display: block;
-  margin-top: 1em;
+  margin-top: 0.5em;
   font-size: 0.8em;
 }
 
@@ -1316,6 +1316,14 @@ footer .row {
 
 #social h2 {
   border-top: none;
+}
+
+#social h2 a {
+  color: #999 !important;
+}
+
+#social iframe {
+  width: 100%;
 }
 
 /*
