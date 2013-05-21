@@ -27,8 +27,7 @@
 		try {
 			$email = stripslashes($_POST["email"]);
 			if (!validEmail($email)){
-				echo json_encode(array("result"=>"failure","exception"=>"Invalid email"));
-				die;
+				die(json_encode(array("result"=>"failure","exception"=>"Invalid email")));
 			}
 			$message = stripslashes($_POST["message"]);
 			$name = stripslashes($_POST["uname"]);
